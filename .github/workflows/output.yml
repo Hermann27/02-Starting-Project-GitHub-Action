@@ -1,0 +1,8 @@
+name: Output informations
+on: workflow_dispatch # this workflow will be manuelly trigger
+jobs:
+  info:
+    runs-on: ubuntu-latest # I am using the latest Ubuntu image
+    steps:
+      - name: Output GitHub context
+        run: echo "${{ toJSON(github)}}" # this will return all the contxt infos from my github
